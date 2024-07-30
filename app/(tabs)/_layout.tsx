@@ -29,7 +29,7 @@ const MainHeader = () => ({
     headerRight: () => (
         <View className="flex flex-row mr-4 items-center">
             <NavIcon icon="plus-circle" url="/screens/page-one" />
-            <NavIcon icon="bell" hasBadge url="/screens/page-two" />
+            <NavIcon icon="bell" hasBadge url="/screens/notifications" />
         </View>
     )
 });
