@@ -1,6 +1,8 @@
-# Expo Router Example
+# Starter App template using Expo and Nativewind
 
 Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+
+Will be adding components on the go.
 
 ## 🚀 How to use
 
