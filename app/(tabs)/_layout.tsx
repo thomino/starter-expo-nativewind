@@ -3,13 +3,16 @@ import { Text, View, Pressable } from "react-native";
 import { Link } from "expo-router";
 import NavIcon from "../components/NavIcon";
 import Feather from '@expo/vector-icons/Feather';
+import { useColorScheme } from "nativewind";
+
 
 export default () => {
+    const { colorScheme, toggleColorScheme } = useColorScheme();
     const getHeaderOptions = (title: string) => ({
         ...DifferentHeader({ title })
     });
     return (
-        <Tabs screenOptions={{ tabBarActiveTintColor: '#0EA5E9', tabBarHideOnKeyboard:true, headerTitle: ' ', tabBarShowLabel: false, tabBarStyle: {height:70, alignItems: "center", display: "flex"} }}>
+        <Tabs screenOptions={{ tabBarActiveTintColor: '#0EA5E9', tabBarHideOnKeyboard:true, headerTitle: ' ', tabBarShowLabel: false, tabBarStyle: {height:70, alignItems: "center", display: "flex", backgroundColor: colorScheme === 'dark' ? '#333' : '#fff',  } }}>
             <Tabs.Screen name="home" options={{ ...MainHeader(), tabBarIcon: ({ focused }) => (<Feather name="home" size={25} color={focused ? '#333' : '#bbb'} />) }} />
             <Tabs.Screen name="search" options={{ ...getHeaderOptions('Search'), tabBarIcon: ({ focused }) => (<Feather name="search" size={25} color={focused ? '#333' : '#bbb'} />) }} />
             <Tabs.Screen name="components" options={{ ...getHeaderOptions('Components'), tabBarIcon: ({ focused }) => (<Feather name="grid" size={25} color={focused ? '#333' : '#bbb'} />) }} />
@@ -22,7 +25,7 @@ export default () => {
 const MainHeader = () => ({
     headerShadowVisible: false,
     headerLeft: () => (
-        <Text className="font-bold text-xl ml-4">
+        <Text className="font-bold text-xl ml-4 dark:text-white">
             App name
         </Text>
 
@@ -41,7 +44,7 @@ const DifferentHeader = (props) => {
     return {
         headerShadowVisible: false,
         headerLeft: () => (
-            <Text className="font-bold text-xl ml-4">
+            <Text className="font-bold text-xl ml-4 dark:text-white">
                 {title}
             </Text>
 
