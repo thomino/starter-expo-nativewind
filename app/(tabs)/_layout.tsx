@@ -12,17 +12,18 @@ export default () => {
         ...DifferentHeader({ title })
     });
     return (
-        <Tabs screenOptions={{ tabBarActiveTintColor: '#0EA5E9', tabBarHideOnKeyboard:true, headerTitle: ' ', tabBarShowLabel: false, tabBarStyle: {height:70, alignItems: "center", display: "flex", backgroundColor: colorScheme === 'dark' ? '#333' : '#fff',  } }}>
-            <Tabs.Screen name="home" options={{ ...MainHeader(), tabBarIcon: ({ focused }) => (<Feather name="home" size={25} color={focused ? '#333' : '#bbb'} />) }} />
-            <Tabs.Screen name="search" options={{ ...getHeaderOptions('Search'), tabBarIcon: ({ focused }) => (<Feather name="search" size={25} color={focused ? '#333' : '#bbb'} />) }} />
-            <Tabs.Screen name="components" options={{ ...getHeaderOptions('Components'), tabBarIcon: ({ focused }) => (<Feather name="grid" size={25} color={focused ? '#333' : '#bbb'} />) }} />
-            <Tabs.Screen name="profile" options={{ ...getHeaderOptions('Profile'), tabBarIcon: ({ focused }) => (<Feather name="user" size={25} color={focused ? '#333' : '#bbb'} />) }} />
+        <Tabs screenOptions={{ tabBarActiveTintColor: '#0EA5E9', tabBarHideOnKeyboard:true, headerTitle: ' ', tabBarShowLabel: false, tabBarStyle: {height:70, alignItems: "center", display: "flex", backgroundColor: colorScheme === 'dark' ? '#171717' : '#fff',  } }}>
+            <Tabs.Screen name="home" options={{ ...MainHeader(), headerStyle:{backgroundColor: colorScheme === 'dark' ? '#171717' : '#fff'}, tabBarIcon: ({ focused }) => (<Feather name="home" size={25} color={focused ? colorScheme === 'dark' ? '#fff' : '#000' : colorScheme === 'dark' ? '#686868' : '#bbb'} />) }} />
+            <Tabs.Screen name="search" options={{ ...getHeaderOptions('Search'), headerStyle:{backgroundColor: colorScheme === 'dark' ? '#171717' : '#fff'}, tabBarIcon: ({ focused }) => (<Feather name="search" size={25} color={focused ? colorScheme === 'dark' ? '#fff' : '#000' : colorScheme === 'dark' ? '#686868' : '#bbb'} />) }} />
+            <Tabs.Screen name="components" options={{ ...getHeaderOptions('Components'), headerStyle:{backgroundColor: colorScheme === 'dark' ? '#171717' : '#fff'}, tabBarIcon: ({ focused }) => (<Feather name="grid" size={25} color={focused ? colorScheme === 'dark' ? '#fff' : '#000' : colorScheme === 'dark' ? '#686868' : '#bbb'} />) }} />
+            <Tabs.Screen name="profile" options={{ ...getHeaderOptions('Profile'), headerStyle:{backgroundColor: colorScheme === 'dark' ? '#171717' : '#fff'}, tabBarIcon: ({ focused }) => (<Feather name="user" size={25} color={focused ? colorScheme === 'dark' ? '#fff' : '#000' : colorScheme === 'dark' ? '#686868' : '#bbb'} />) }} />
         </Tabs>
     )
 }
 
 
 const MainHeader = () => ({
+    
     headerShadowVisible: false,
     headerLeft: () => (
         <Text className="font-bold text-xl ml-4 dark:text-white">
@@ -35,7 +36,7 @@ const MainHeader = () => ({
             <NavIcon icon="plus-circle" url="/screens/page-one" />
             <NavIcon icon="bell" hasBadge url="/screens/notifications" />
         </View>
-    )
+    ),
 });
 
 

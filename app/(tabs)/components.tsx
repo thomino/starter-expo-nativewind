@@ -8,7 +8,7 @@ import Button from '../components/Button'
 
 const Components = () => {
     return (
-        <ScrollView className='p-4 bg-white'>
+        <ScrollView className='p-4 bg-white dark:bg-neutral-900'>
             {/*<Stack.Screen options={{ headerTitle: "List", headerShown: true, headerShadowVisible: false }} />*/}
 
 

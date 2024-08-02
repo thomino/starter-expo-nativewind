@@ -6,8 +6,8 @@ import { useColorScheme } from "nativewind";
 import Feather from '@expo/vector-icons/Feather';
 
 const NavIcon = (props) => {
-    const { colorScheme, toggleColorScheme } = useColorScheme();
-    const { icon, url, hasBadge } = props
+    const { colorScheme } = useColorScheme();
+    const { icon, url, hasBadge } = props 
     return (
         <View className='w-[44px] h-[44px] ml-2'>
             <Link asChild href={url}>
