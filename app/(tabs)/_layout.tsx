@@ -12,6 +12,7 @@ export default () => {
         <Tabs screenOptions={{ tabBarActiveTintColor: '#0EA5E9', tabBarHideOnKeyboard:true, headerTitle: ' ', tabBarShowLabel: false, tabBarStyle: {height:70, alignItems: "center", display: "flex"} }}>
             <Tabs.Screen name="home" options={{ ...MainHeader(), tabBarIcon: ({ focused }) => (<Feather name="home" size={25} color={focused ? '#333' : '#bbb'} />) }} />
             <Tabs.Screen name="search" options={{ ...getHeaderOptions('Search'), tabBarIcon: ({ focused }) => (<Feather name="search" size={25} color={focused ? '#333' : '#bbb'} />) }} />
+            <Tabs.Screen name="components" options={{ ...getHeaderOptions('Components'), tabBarIcon: ({ focused }) => (<Feather name="grid" size={25} color={focused ? '#333' : '#bbb'} />) }} />
             <Tabs.Screen name="profile" options={{ ...getHeaderOptions('Profile'), tabBarIcon: ({ focused }) => (<Feather name="user" size={25} color={focused ? '#333' : '#bbb'} />) }} />
         </Tabs>
     )
