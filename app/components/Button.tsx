@@ -9,7 +9,7 @@ const Button = (props) => {
     const { title, icon, hasIcon, isSmall, isSecondary } = props
     return (
 
-        <Pressable className={`flex-1 flex-row items-center justify-center rounded-lg ${isSmall ? ' px-2 py-3' : 'py-4 px-2'} ${isSecondary ? 'bg-slate-200 dark:bg-neutral-800' : 'bg-neutral-900 dark:bg-white '}`}>
+        <Pressable className={`w-full flex-row items-center justify-center rounded-lg ${isSmall ? ' px-2 py-3' : 'py-4 px-2'} ${isSecondary ? 'bg-slate-200 dark:bg-neutral-800' : 'bg-neutral-900 dark:bg-white '}`}>
             {hasIcon &&
                 <View className='mr-4'>
                     <Feather name={icon} size={20} color={isSecondary ? (colorScheme === 'dark' ? '#ccc' : '#aaa') : (colorScheme === 'dark' ? '#000' : '#fff')}/>
