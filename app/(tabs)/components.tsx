@@ -10,7 +10,6 @@ const Components = () => {
     return (
         <ScrollView className='p-4 bg-white w-full dark:bg-neutral-900'>
             {/*<Stack.Screen options={{ headerTitle: "List", headerShown: true, headerShadowVisible: false }} />*/}
-
             <Input label="Basic input" placeholder="Type here" />
             <Input label="With icon" hasIcon icon="search" placeholder="Type here" />
 
