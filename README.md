@@ -2,7 +2,7 @@
 
 Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
 
-![alt text](https://github.com/thomino/starter-expo-nativewind/tree/main/app/assets/img/readme.jpg?raw=true)
+![alt text](https://github.com/thomino/starter-expo-nativewind/blob/main/app/assets/img/readme.jpg?raw=true)
 
 Will be adding components on the go.
 
